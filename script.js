@@ -1,6 +1,6 @@
 const apiKey = "e9deec758c70447ec5c3d85d8d7b7655";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
-checkWeather("canada");
+
 async function checkWeather(city) {
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
     var data = await response.json();
@@ -24,5 +24,6 @@ document.querySelector("#submit").onclick = function () {
     var city = document.querySelector("#search").value;
     checkWeather(city);
 }
+checkWeather("canada");
 
 
